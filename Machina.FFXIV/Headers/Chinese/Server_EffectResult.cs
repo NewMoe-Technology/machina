@@ -15,6 +15,7 @@
 
 using System.Runtime.InteropServices;
 
+
 namespace Machina.FFXIV.Headers.Chinese
 {
     [StructLayout(LayoutKind.Sequential, Pack = 1)]
@@ -33,18 +34,18 @@ namespace Machina.FFXIV.Headers.Chinese
     public unsafe struct Server_EffectResult
     {
         public Server_MessageHeader MessageHeader; // 8 DWORDS
+        public uint Unknown1;
         public uint RelatedActionSequence;
         public uint ActorID;
         public uint CurrentHP;
         public uint MaxHP;
         public ushort CurrentMP;
         public ushort Unknown3;
-        public ushort MaxMP;
-        public ushort Unknown4;
+        //        public UInt16 MaxMP;
+        //      public UInt16 Unknown4;
         public byte DamageShield;
         public byte EffectCount;
         public ushort Unknown6;
         public fixed byte Effects[4 * 4 * 4];
-        public uint Unknown7;
     }
 }

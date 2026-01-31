@@ -19,7 +19,8 @@ namespace Machina.FFXIV.Headers.Chinese
 {
     public enum Server_ActorControlCategory : ushort
     {
-        HoT_DoT = 0x17,
+        HoT = 0x604, // Changed in 7.10
+        DoT = 0x605, // Changed in 7.10
         CancelAbility = 0x0f,
         Death = 0x06,
         TargetIcon = 0x22,
@@ -29,6 +30,7 @@ namespace Machina.FFXIV.Headers.Chinese
         UpdateEffect = 0x16,
         Targetable = 0x36,
         DirectorUpdate = 0x6d,
+        SetTargetSign = 0x1f6,
         LimitBreak = 0x1f9
     };
 

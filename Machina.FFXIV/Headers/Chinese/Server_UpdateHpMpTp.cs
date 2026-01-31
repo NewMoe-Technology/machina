@@ -23,10 +23,6 @@ namespace Machina.FFXIV.Headers.Chinese
         public Server_MessageHeader MessageHeader; // 8 DWORDS
         public uint CurrentHp;
         public ushort CurrentMp;
-        public ushort CurrentTp;
-        public ushort unknown1;
-        public ushort unknown2;
-        public ushort unknown3;
-        public ushort unknown4;
+        public ushort Unknown1;
     }
 }

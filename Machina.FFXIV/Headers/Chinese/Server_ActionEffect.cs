@@ -25,6 +25,18 @@ namespace Machina.FFXIV.Headers.Chinese
         MountName = 0x0d
     };
 
+    /*
+    public struct EffectEntry
+    {
+        byte effectType;
+        byte hitSeverity;
+        byte param;
+        sbyte bonusPercent;
+        byte valueMultiplier;
+        byte flag;
+        UInt16 value;
+    }*/
+
     [StructLayout(LayoutKind.Sequential, Pack = 1)]
     public unsafe struct Server_ActionEffectHeader
     {
@@ -43,7 +55,6 @@ namespace Machina.FFXIV.Headers.Chinese
         public byte unknown20;
         public byte effectCount;
         public ushort padding21;
-
     }
 
     [StructLayout(LayoutKind.Sequential, Pack = 1)]
@@ -69,8 +80,9 @@ namespace Machina.FFXIV.Headers.Chinese
         public ushort padding3;
         public uint padding4;
         public fixed ulong TargetID[8];
-        public uint effectflags1;
-        public ushort effectflags2;
+        public ushort TargetX;
+        public ushort TargetY;
+        public ushort TargetZ;
         public ushort padding5;
         public uint padding6;
     }
@@ -85,8 +97,9 @@ namespace Machina.FFXIV.Headers.Chinese
         public ushort padding3;
         public uint padding4;
         public fixed ulong TargetID[16];
-        public uint effectflags1;
-        public ushort effectflags2;
+        public ushort TargetX;
+        public ushort TargetY;
+        public ushort TargetZ;
         public ushort padding5;
         public uint padding6;
     }
@@ -101,8 +114,9 @@ namespace Machina.FFXIV.Headers.Chinese
         public ushort padding3;
         public uint padding4;
         public fixed ulong TargetID[24];
-        public uint effectflags1;
-        public ushort effectflags2;
+        public ushort TargetX;
+        public ushort TargetY;
+        public ushort TargetZ;
         public ushort padding5;
         public uint padding6;
     }
@@ -117,8 +131,9 @@ namespace Machina.FFXIV.Headers.Chinese
         public ushort padding3;
         public uint padding4;
         public fixed ulong TargetID[32];
-        public uint effectflags1;
-        public ushort effectflags2;
+        public ushort TargetX;
+        public ushort TargetY;
+        public ushort TargetZ;
         public ushort padding5;
         public uint padding6;
     }
