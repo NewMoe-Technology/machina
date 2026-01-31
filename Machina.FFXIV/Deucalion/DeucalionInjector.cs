@@ -216,6 +216,19 @@ namespace Machina.FFXIV.Deucalion
             // Note: if this method does not work, do not stop processing.  If user runs with elevated permissions, injection will still work.
             _ = UpdateProcessDACL(processId);
 
+            // Ensure deucalion will not be re-injected. (It will prevent auto unload since its ref always beyond 0 if that happened)
+            using (Process process = Process.GetProcessById(processId))
+            {
+                foreach (ProcessModule module in process.Modules)
+                {
+                    if (module.ModuleName.ToLowerInvariant().Contains("deucalion")) // We don't care about what version is injected, just that it is already present.
+                    {
+                        Trace.WriteLine($"DeucalionInjector: Deucalion has already injected into process {processId}.", "DEBUG-MACHINA");
+                        return true;
+                    }
+                }
+            }
+
             IntPtr procHandle = IntPtr.Zero;
             IntPtr threadHandle = IntPtr.Zero;
             try
