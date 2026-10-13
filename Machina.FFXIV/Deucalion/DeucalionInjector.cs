@@ -1,4 +1,4 @@
-﻿// Copyright © 2023 Ravahn - All Rights Reserved
+// Copyright © 2023 Ravahn - All Rights Reserved
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -138,8 +138,8 @@ namespace Machina.FFXIV.Deucalion
         {
             get
             {
-                return //GameRegion == GameRegion.TraditionalChinese ? "deucalion-1.2.1.dll" :
-                       "deucalion-1.5.0.dll";
+                return GameRegion == GameRegion.TraditionalChinese ? "deucalion-1.5.0.dll" :
+                       "deucalion-1.5.1.dll";
             }
         }
 
@@ -150,9 +150,9 @@ namespace Machina.FFXIV.Deucalion
         {
             get
             {
-                return //GameRegion == GameRegion.TraditionalChinese?
-                    //new Version(1, 2, 1) :
-                    new Version(1, 5, 0);
+                return GameRegion == GameRegion.TraditionalChinese?
+                    new Version(1, 5, 0) :
+                    new Version(1, 5, 1);
             }
         }
 
@@ -166,8 +166,8 @@ namespace Machina.FFXIV.Deucalion
         {
             get
             {
-                return // GameRegion == GameRegion.TraditionalChinese ? "ea-bf-ff-9e-6c-f5-84-2f-97-78-1b-ae-66-9d-5b-2b-40-56-a5-88-1b-ed-e2-9c-94-24-b4-62-6c-8f-56-6e" : // 1.2.1 
-                    "32-6b-e4-db-26-10-64-eb-b5-1b-8c-46-d2-94-0f-55-70-1d-79-88-7e-2c-65-07-0a-ff-00-de-4c-8c-65-ef"; // 1.5.0
+                return GameRegion == GameRegion.TraditionalChinese ? "32-6b-e4-db-26-10-64-eb-b5-1b-8c-46-d2-94-0f-55-70-1d-79-88-7e-2c-65-07-0a-ff-00-de-4c-8c-65-ef" // 1.5.0
+                    : "61-c1-b6-ea-b0-f3-73-64-ca-4d-55-59-7e-aa-55-1d-29-f6-1b-5f-a8-1f-79-38-ee-19-01-25-05-6f-16-3b"; // 1.5.1
             }
         }
 
