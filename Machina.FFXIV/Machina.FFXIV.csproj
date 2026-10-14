@@ -72,12 +72,5 @@
           <PackagePath>lib\$(TargetFrameworks)</PackagePath>
           <PackageCopyToOutput>true</PackageCopyToOutput>
       </Content>
-      <Content Include="Deucalion\Distrib\deucalion-1.5.1.dll">
-          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-          <TargetPath>deucalion-1.5.1.dll</TargetPath>
-          <Pack>True</Pack>
-          <PackagePath>lib\$(TargetFrameworks)</PackagePath>
-          <PackageCopyToOutput>true</PackageCopyToOutput>
-      </Content>
   </ItemGroup>
 </Project>
